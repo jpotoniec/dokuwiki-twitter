@@ -88,7 +88,7 @@ class syntax_plugin_twitter extends DokuWiki_Syntax_Plugin {
 				}
 			}
 			$sResponse .= '<tr class="twtRow">';
-			$sResponse .= '  <td class="twtMsg"><small><img width="48" src="' . $image . '"><a class="urlextern twtUrlextern" target="_blank" href="https://twitter.com/' . $from . '">' . $from . '</a><a href="' . $permalink . '" class="urlextern twtUrlextern" target="_blank">' . $time . '</a></small><br/>' . $text . '</td>';
+			$sResponse .= '  <td class="twtMsg"><small><img width="48" alt="'.$from.'" src="' . $image . '"><a class="urlextern twtUrlextern" target="_blank" href="https://twitter.com/' . $from . '">' . $from . '</a><a href="' . $permalink . '" class="urlextern twtUrlextern" target="_blank">' . $time . '</a></small><br/>' . $text . '</td>';
 			$sResponse .= '</tr>';
 		}
 		$sResponse .= '</table></div>';
