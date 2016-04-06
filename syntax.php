@@ -76,7 +76,7 @@ class syntax_plugin_twitter extends DokuWiki_Syntax_Plugin {
 			// get hashtags
 			if (preg_match_all('/#(.*?)\s/', $text, $arMatches)) {
 				for ($i = 0; $i < count($arMatches [0]); $i ++) {
-					$text = str_replace($arMatches [0] [$i], '<a class="urlextern" target="_blank" href="https://twitter.com/search?q=' . $arMatches [1] [$i] . '">' . $arMatches [0] [$i] . "</a>", $text);
+					$text = str_replace($arMatches [0] [$i], '<a target="_blank" href="https://twitter.com/search?q=' . $arMatches [1] [$i] . '">' . $arMatches [0] [$i] . "</a>", $text);
 				}
 			}
 
@@ -84,7 +84,7 @@ class syntax_plugin_twitter extends DokuWiki_Syntax_Plugin {
 			if (preg_match_all('/(^| )@(.*?)\s/', $text, $arMatches)) {
 				for ($i = 0; $i < count($arMatches [0]); $i ++) {
 					$strTwitterer = preg_replace('/\W/', '', $arMatches [0] [$i]);
-					$text = str_replace($strTwitterer, '<a class="urlextern" target="_blank" href="https://twitter.com/' . $strTwitterer . '">' . $strTwitterer . "</a>", $text);
+					$text = str_replace($strTwitterer, '<a target="_blank" href="https://twitter.com/' . $strTwitterer . '">' . $strTwitterer . "</a>", $text);
 				}
 			}
 			$sResponse .= '<tr class="twtRow">';
